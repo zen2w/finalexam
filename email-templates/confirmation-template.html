@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Your MovieSeat Booking Confirmation</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0B0B0D; color: #FFFFFF; margin: 0; padding: 24px; }
+    .card { max-width: 520px; margin: 0 auto; background-color: #15161B; border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .logo { text-align: center; font-size: 22px; font-weight: 700; color: #F59E0B; letter-spacing: 1px; }
+    .heading { font-size: 20px; font-weight: 600; text-align: center; margin: 12px 0 6px 0; color: #FFFFFF; }
+    .ref-badge { text-align: center; margin-bottom: 24px; }
+    .ref-code { display: inline-block; background: rgba(245, 158, 11, 0.15); border: 1px solid #F59E0B; color: #F59E0B; padding: 6px 14px; border-radius: 9999px; font-weight: 700; font-size: 15px; letter-spacing: 1px; font-family: monospace; }
+    .detail-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+    .detail-table td { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .detail-table td.label { color: #9CA3AF; width: 40%; }
+    .detail-table td.val { color: #FFFFFF; font-weight: 600; text-align: right; }
+    .total-row td { border-bottom: none; font-size: 16px; color: #F59E0B; padding-top: 14px; }
+    .ticket-notice { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; font-size: 12px; color: #D1D5DB; line-height: 1.5; margin-top: 16px; }
+    .footer { font-size: 12px; color: #6B7280; text-align: center; margin-top: 24px; line-height: 1.4; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 18px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">&#127916; MOVIESEAT CINEMAS</div>
+    <div class="heading">Booking Confirmed!</div>
+    <div class="ref-badge"><span class="ref-code">{{reference_code}}</span></div>
+    
+    <table class="detail-table">
+      <tr><td class="label">Movie</td><td class="val">{{movie_title}}</td></tr>
+      <tr><td class="label">Auditorium</td><td class="val">{{cinema}}</td></tr>
+      <tr><td class="label">Showtime</td><td class="val">{{showtime}}</td></tr>
+      <tr><td class="label">Seats</td><td class="val">{{seats}}</td></tr>
+      <tr class="total-row"><td class="label" style="color:#F59E0B;">Total Paid</td><td class="val">{{total_amount}}</td></tr>
+    </table>
+
+    <div class="ticket-notice">
+      &#127919; <strong>Admission Instructions:</strong> Show this confirmation or your digital QR pass at the entrance turnstile. Free seat cancellation is available up to 30 minutes before showtime via Find Reservation.
+    </div>
+
+    <div class="footer">MovieSeat Cinema Complex &bull; Bonifacio Global City, Manila &bull; Enjoy your movie!</div>
+  </div>
+</body>
+</html>
